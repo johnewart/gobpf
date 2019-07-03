@@ -807,7 +807,7 @@ func (b *Module) initializePerfMaps(parameters map[string]SectionParams) error {
 		}
 
 		pageSize := os.Getpagesize()
-		b.maps[name].pageCount = 8 // reasonable default
+		b.maps[name].pageCount = 16384
 
 		sectionName := "maps/" + name
 		if params, ok := parameters[sectionName]; ok {

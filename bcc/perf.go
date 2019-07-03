@@ -46,7 +46,7 @@ type callbackData struct {
 	receiverChan chan []byte
 }
 
-const BPF_PERF_READER_PAGE_CNT = 8
+const BPF_PERF_READER_PAGE_CNT = 131072
 
 var byteOrder binary.ByteOrder
 var callbackRegister = make(map[uint64]*callbackData)
